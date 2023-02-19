@@ -11,7 +11,8 @@ const getRecipies = async (type) => {
 
 async function page({ params }) {
    const recipes = await getRecipies(params.type);
-   return <RecipieList recipes={recipes.meals} type={params.type} />;
+
+   return <RecipieList recipes={recipes.meals} type={params.type || ""} />;
 }
 
 export default page;

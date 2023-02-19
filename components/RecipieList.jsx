@@ -3,10 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 function RecipieList({ recipes, type }) {
-   console.log(recipes);
    return (
       <div className="grid grid-cols-1 gap-5 p-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 overflow-hidden">
-         {recipes.map((recipe, index) => {
+         {recipes?.map((recipe, index) => {
             return (
                <div key={index} className="rounded bg-slate-300 flex flex-col">
                   <Image
